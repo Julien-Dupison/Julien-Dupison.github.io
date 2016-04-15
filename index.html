@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel='stylesheet' type='text/css'/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+		<!-- MODAL -->
+		<div id="modal-projet-full" class="modal blue-grey darken-4">
+	    	<img id="modal-projet-full-img" style="width:100%;" src="img/easypils/easypils_full_1.jpg">
+			<p id="modal-projet-full-txt" style="padding-left:20px;padding-right:20px;color:#fff;"><i id="close-modal" style="color:#fff;cursor:pointer;" class="material-icons right">close</i></p>
+		</div>
+
+		<!-- BACKGROUND IMAGE -->
+		<div class="background-image"></div>
+
+		<!-- LOGO -->
+		<div id="home-container">
+			<a><img showing="home" id="home-img" src="img/icone.png"/></a>
+			<p id="home-txt" style="display:none;">
+				<span id="home-txt-head">JULIEN DUPISON</span><br>
+				<span style="font-family:'Roboto'">Développeur</span>
+			</p>
+		</div>
+
+		<!-- MENU -->
+		<div id="menu">
+			<ul>
+				<li><a showing="home" class="menu-item waves-effect waves-light">ACCEUIL</a></li>
+				<li><a showing="projets" class="menu-item waves-effect waves-light">PROJETS</a></li>
+				<!-- <li><a showing="veille" class="menu-item waves-effect waves-light">VEILLE</a></li> -->
+				<li><a showing="contact" class="menu-item waves-effect waves-light">CONTACT</a></li>
+			</ul>
+		</div>
+
+		<!-- SLIDES -->
+		<div class="slide-container">
+
+			<!-- SLIDE HOME -->
+			<div class="slide" id="home">
+				<div class="row">
+					<div class="col s12">
+						<p style="color:#ffc107;font-family:'Oswald',sans-serif;font-size:5em;font-weight:bold;margin:0;">JULIEN DUPISON</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col l4 m12 s12">
+						<div class="card-panel blue-grey darken-4 z-depth-4">
+							<img src="img/abstract-h-c-400-500-4.jpg" style="width:100%;">
+		        		</div>
+					</div>
+					<div class="col l7 m12 s12 offset-l1">
+						<h4 style="color:#ffc107;">Développeur</h3><br>
+						<p class="white-text" style="font-size:18px;">
+							Passionné par l'informatique, je souhaite depuis longtemps pouvoir
+							vivre de ma passion et en faire mon métier. Grace à ma formation en
+							BTS SIO (Service Informatique aux Organisations) et à mon esprit
+							autodidacte, je suis compétent dans de nombreux domaines et je peux
+							désormais appréhender ma passion avec une approche professionnalisante.
+						</p><br>
+						<h4 style="color:#ffc107;">Compétences</h3><br>
+						<div class="row">
+							<div class="col l4 m4 s12">
+								<h5 style="color:#ffc107;">Langages</h5>
+								<ul class="white-text">
+									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;HTML / CSS</li>
+									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;JS / JQuery / Node</li>
+									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;PHP</li>
+									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;Java / Android</li>
+								</ul>
+							</div>
+							<div class="col l4 m4 s12">
+								<h5 style="color:#ffc107;">Outils</h5>
+								<ul class="white-text">
+									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;Git</li>
+									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;PostMan</li>
+									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;FileZilla / Putty</li>
+								</ul>
+							</div>
+							<div class="col l4 m4 s12">
+								<h5 style="color:#ffc107;">Divers / Hobbies</h5>
+								<ul class="white-text">
+									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;Gimp / Photoshop</li>
+									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;Unity</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- SLIDE PROJETS -->
+			<div class="slide" id="projets">
+				<div class="row">
+					<div class="col s12">
+						<p style="color:#ffc107;font-family:'Oswald',sans-serif;font-size:5em;font-weight:bold;margin:0;">PROJETS</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col l3 m6 s12">
+						<div class="projet card blue-grey darken-4 z-depth-3">
+					    	<div class="card-image waves-effect waves-block waves-easypils">
+					    		<img class="activator" style="height:90%;" src="img/easypils/easypils_preview.jpg">
+					    	</div>
+
+					    	<div class="card-content">
+					    		<span class="card-title custom-title" style="color:#D32F2E;">EasyPils</span>
+					    		<p class="white-text">Site de gestion d'une pharmacie et son application Android</p>
+					    	</div>
+
+					    	<div class="card-reveal" style="background-color:#D32F2E;">
+					    		<span class="card-title" style="color:#fff;font-family:'Oswald',sans-serif;">EasyPils<i style="color:#fff;" class="material-icons right">close</i></span>
+								<ul class="custom-gallery">
+									<li><a class="modal-trigger" img-trigger="img/easypils/easypils_full_4.jpg" txt-trigger="Connection administrateur" href="#modal-projet-full"><img class="custom-gallery-item" src="img/easypils/easypils_preview_4.jpg"></a></li>
+								    <li><a class="modal-trigger" img-trigger="img/easypils/easypils_full_1.jpg" txt-trigger="Profil du pharmacien" href="#modal-projet-full"><img class="custom-gallery-item" src="img/easypils/easypils_preview_1.jpg"></a></li>
+								    <li><a class="modal-trigger" img-trigger="img/easypils/easypils_full_2.jpg" txt-trigger="Ajout d'ordonnance" href="#modal-projet-full"><img class="custom-gallery-item" src="img/easypils/easypils_preview_2.jpg"></a></li>
+								    <li><a class="modal-trigger" img-trigger="img/easypils/easypils_full_3.jpg" txt-trigger="Edition d'un client" href="#modal-projet-full"><img class="custom-gallery-item" src="img/easypils/easypils_preview_3.jpg"></a></li>
+								</ul>
+								<p style="color:#fff;">
+									Projet fictif dont le but est de fournir à une pharmacie un panel de gestion
+									(client, medicaments, ordonnance, ect...), ainsi que de fournir aux clients de
+									la pharmacie une application android leur permettant d'effectuer un suivi de
+									leurs ordonnances et de leurs prises de medicaments
+								</p>
+								<span class="card-title" style="color:#fff;font-family:'Oswald',sans-serif;margin-top:40px;">Compétences</span><br>
+								<ul class="white-text" style="margin:0;">
+									<li>HTML/CSS</li>
+									<li>JS/JQuery</li>
+									<li>PHP</li>
+									<li>AJAX</li>
+									<li>Android</li>
+								</ul>
+					    	</div>
+						</div>
+					</div>
+
+					<div class="col l3 m6 s12">
+						<div class="projet card blue-grey darken-4 z-depth-3">
+					    	<div class="card-image waves-effect waves-block waves-node">
+					    		<img class="activator" style="height:90%;" src="img/webscraping/webscraping_preview.jpg">
+					    	</div>
+
+					    	<div class="card-content">
+					    		<span class="card-title custom-title" style="color:#43853D;">API Web Scraping</span>
+					    		<p class="white-text">API récupérant des données sur divers sites web grâce à Node.js</p>
+					    	</div>
+
+					    	<div class="card-reveal" style="background-color:#43853D;">
+					    		<span class="card-title" style="color:#fff;font-family:'Oswald',sans-serif;">API Web Scraping<i style="color:#fff;" class="material-icons right">close</i></span>
+								<ul class="custom-gallery">
+									<li><a class="modal-trigger" img-trigger="img/webscraping/webscraping_full_1.jpg" txt-trigger="Lancement du scraping" href="#modal-projet-full"><img class="custom-gallery-item" src="img/webscraping/webscraping_preview_1.jpg"></a></li>
+								    <li><a class="modal-trigger" img-trigger="img/webscraping/webscraping_full_2.jpg" txt-trigger="Exemple de fichier généré par l'API" href="#modal-projet-full"><img class="custom-gallery-item" src="img/webscraping/webscraping_preview_2.jpg"></a></li>
+								    <li><a class="modal-trigger" img-trigger="img/webscraping/webscraping_full_3.jpg" txt-trigger="Intégration des données dans une application Sass" href="#modal-projet-full"><img class="custom-gallery-item" src="img/webscraping/webscraping_preview_3.jpg"></a></li>
+								</ul>
+								<p style="color:#fff;">
+									Projet réalisé en stage, le but étant d'écumer les annonces de la plupart des sites
+									de location de logements de vacances et de recuperer automatiquement leurs données
+									puis de les intégrer à une application éxistante.
+								</p>
+								<span class="card-title" style="color:#fff;font-family:'Oswald',sans-serif;margin-top:80px;">Compétences</span><br>
+								<ul class="white-text" style="margin:0;">
+									<li>HTML/CSS</li>
+									<li>JS/Node</li>
+									<li>PHP</li>
+								</ul>
+					    	</div>
+						</div>
+					</div>
+
+					<div class="col l3 m6 s12">
+						<div class="projet card blue-grey darken-4 z-depth-3">
+					    	<div class="card-image waves-effect waves-block waves-shmup">
+					    		<img class="activator" style="height:90%;" src="img/shmup/shmup_preview.jpg">
+					    	</div>
+
+					    	<div class="card-content">
+					    		<span class="card-title custom-title" style="color:#106EFF;">SHMUP</span>
+					    		<p class="white-text">Shoot Them Up utilisant les posibilité de l'HTML5 et de Javascript pour fonctionner</p>
+					    	</div>
+
+					    	<div class="card-reveal" style="background-color:#106EFF;">
+					    		<span class="card-title" style="color:#fff;font-family:'Oswald',sans-serif;">SHMUP<i style="color:#fff;" class="material-icons right">close</i></span>
+								<ul class="custom-gallery">
+									<li><a class="modal-trigger" img-trigger="img/shmup/shmup_full_1.jpg" txt-trigger="Déroulement d'une partie" href="#modal-projet-full"><img class="custom-gallery-item" src="img/shmup/shmup_preview_1.jpg"></a></li>
+								    <li><a class="modal-trigger" img-trigger="img/shmup/shmup_full_2.jpg" txt-trigger="Exemple de triple shot" href="#modal-projet-full"><img class="custom-gallery-item" src="img/shmup/shmup_preview_2.jpg"></a></li>
+								    <li><a class="modal-trigger" img-trigger="img/shmup/shmup_full_3.jpg" txt-trigger="Ennemi générant un boucliers" href="#modal-projet-full"><img class="custom-gallery-item" src="img/shmup/shmup_preview_3.jpg"></a></li>
+									<li><a class="modal-trigger" img-trigger="img/shmup/shmup_full_4.jpg" txt-trigger="Fin de partie" href="#modal-projet-full"><img class="custom-gallery-item" src="img/shmup/shmup_preview_4.jpg"></a></li>
+								</ul>
+								<p style="color:#fff;">Projet réalisé sur mon temps libre. Il s'agit d'un jeu utilisant HTML5 et notamment l'élement canvas pour le rendu et le Javascript pour la logique et les animations</p>
+								<span class="card-title" style="color:#fff;font-family:'Oswald',sans-serif;margin-top:80px;">Compétences</span><br>
+								<ul class="white-text" style="margin:0;">
+									<li>HTML5</li>
+									<li>JS</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col l3 m6 s12">
+						<div class="projet card blue-grey darken-4 z-depth-3">
+					    	<div class="card-image waves-effect waves-block waves-stage">
+					    		<img class="activator" style="height:90%;" src="img/stage/stage_preview.jpg">
+					    	</div>
+
+					    	<div class="card-content">
+					    		<span class="card-title custom-title" style="color:#000;">GESTION DE STAGE</span>
+					    		<p style="color:#000;">Application destinée à gerer les stages réalisés par les éléves d'un lycée professionnel</p>
+					    	</div>
+
+					    	<div class="card-reveal" style="background-color:#000;">
+					    		<span class="card-title" style="color:#fff;font-family:'Oswald',sans-serif;">Card Title<i style="color:#fff;" class="material-icons right">close</i></span>
+								<ul class="custom-gallery">
+									<li><a class="modal-trigger" img-trigger="img/stage/stage_full_1.jpg" txt-trigger="Déroulement d'une partie" href="#modal-projet-full"><img class="custom-gallery-item" src="img/stage/stage_preview_1.jpg"></a></li>
+								    <li><a class="modal-trigger" img-trigger="img/stage/stage_full_2.jpg" txt-trigger="Exemple de triple shot" href="#modal-projet-full"><img class="custom-gallery-item" src="img/stage/stage_preview_2.jpg"></a></li>
+								    <li><a class="modal-trigger" img-trigger="img/stage/stage_full_3.jpg" txt-trigger="Ennemi générant un boucliers" href="#modal-projet-full"><img class="custom-gallery-item" src="img/stage/stage_preview_3.jpg"></a></li>
+									<li><a class="modal-trigger" img-trigger="img/stage/stage_full_4.jpg" txt-trigger="Fin de partie" href="#modal-projet-full"><img class="custom-gallery-item" src="img/stage/stage_preview_4.jpg"></a></li>
+								</ul>
+								<p style="color:#fff;">Projet fictif réalisé dans le cadre du premier PPE de seconde année, l'application vise à pouvoir gérer les stages
+									ainsi que l'ensemble des contacts effectués par les éléves lors de leurs recherches grâce à un catalogue d'entreprises
+								</p>
+								<span class="card-title" style="color:#fff;font-family:'Oswald',sans-serif;margin-top:80px;">Compétences</span><br>
+								<ul class="white-text" style="margin:0;">
+									<li>HTML/CSS</li>
+									<li>JS/JQuery</li>
+									<li>AJAX</li>
+									<li>Php</li>
+								</ul>
+					    	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="slide" id="veille" style="background-color:black;">
+				<div class="container">
+				</div>
+			</div> -->
+
+			<div class="slide" id="contact">
+				<div class="row">
+					<div class="col s12">
+						<p style="color:#ffc107;font-family:'Oswald',sans-serif;font-size:5em;font-weight:bold;margin:0;">CONTACT</p>
+					</div>
+				</div><br><br>
+				<div class="row">
+					<div class="card large blue-grey darken-4 z-depth-3" style="padding:10px;border-top:2px solid #e3ab03;">
+						<div class="row">
+							<div class="input-field col l6 m12 s12">
+								<input id="mail" type="text"/>
+								<label for="mail">Votre Mail</label>
+							</div>
+							<div class="input-field col l6 m12 s12">
+								<input id="mail" type="text"/>
+								<label for="mail">Objet</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col l12 m12 s12" style="height:245px;">
+						        <textarea id="message" class="materialize-textarea" maxlength="1800" length="1800"></textarea>
+						        <label for="message">Votre Message</label>
+					        </div>
+						</div>
+						<button class="btn waves-effect waves-light" style="background-color:#ffc107;position:absolute;bottom:15px;right:15px;">Envoyer</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+    	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    	<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.slide').hide();
+				$('#home').show();
+			})
+
+		    $('.modal-trigger').click(function(){
+				var img = $(this).attr('img-trigger');
+				var txt = $(this).attr('txt-trigger');
+				$('#modal-projet-full-img').attr('src',img);
+				$('#modal-projet-full-txt').html(txt);
+				$('#modal-projet-full').openModal();
+			});
+
+			$('.activator').click(function(){
+				$('.carousel').carousel();
+			})
+
+			var active = '#home';
+			$('.menu-item,#home-img').click(function(){
+				selector = '#'+$(this).attr('showing');
+				if(active != selector){
+					$(active).fadeOut();
+					setTimeout(function() {
+    					$(selector).fadeIn();
+						active = selector;
+						if(active == '#home'){
+							$('#home-txt').fadeOut();
+						} else {
+							$('#home-txt').fadeIn();
+						}
+					}, 500);
+				}
+			});
+
+		</script>
+    </body>
+
+  </html>
