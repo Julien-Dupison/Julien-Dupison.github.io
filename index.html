@@ -25,7 +25,7 @@
 		<!-- LOGO -->
 		<div id="home-container">
 			<a><img showing="home" id="home-img" src="img/icone.png"/></a>
-			<p id="home-txt" style="display:none;">
+			<p class="hide-on-small-only" id="home-txt" style="display:none;">
 				<span id="home-txt-head">JULIEN DUPISON</span><br>
 				<span style="font-family:'Roboto'">Développeur</span>
 			</p>
@@ -33,11 +33,18 @@
 
 		<!-- MENU -->
 		<div id="menu">
-			<ul>
+			<a style="color:#ffc107;" id="button-menu-phone" class="hide-on-large-only"><i class="material-icons">menu</i></a>
+			<ul id="menu-classic" class="hide-on-med-and-down">
 				<li><a showing="home" class="menu-item waves-effect waves-light">ACCUEIL</a></li>
 				<li><a showing="projets" class="menu-item waves-effect waves-light">PROJETS</a></li>
-				<!-- <li><a showing="veille" class="menu-item waves-effect waves-light">VEILLE</a></li> -->
+				<li><a showing="informations" class="menu-item waves-effect waves-light">INFORMATIONS</a></li>
 				<li><a showing="contact" class="menu-item waves-effect waves-light">CONTACT</a></li>
+			</ul>
+			<ul id="menu-phone">
+				<li><a showing="home" class="menu-phone-item waves-effect waves-light">ACCUEIL</a></li>
+				<li><a showing="projets" class="menu-phone-item waves-effect waves-light">PROJETS</a></li>
+				<li><a showing="informations" class="menu-phone-item waves-effect waves-light">INFORMATIONS</a></li>
+				<li><a showing="contact" class="menu-phone-item waves-effect waves-light">CONTACT</a></li>
 			</ul>
 		</div>
 
@@ -48,7 +55,8 @@
 			<div class="slide" id="home">
 				<div class="row">
 					<div class="col s12">
-						<p style="color:#ffc107;font-family:'Oswald',sans-serif;font-size:5em;font-weight:bold;margin:0;">JULIEN DUPISON</p>
+						<p class="hide-on-small-only" style="color:#ffc107;font-family:'Oswald',sans-serif;font-size:5em;font-weight:bold;margin:0;">JULIEN DUPISON</p>
+						<p class="hide-on-med-and-up" style="color:#ffc107;font-family:'Oswald',sans-serif;font-size:3em;font-weight:bold;margin:0;">JULIEN DUPISON</p>
 					</div>
 				</div>
 				<div class="row">
@@ -101,7 +109,8 @@
 			<div class="slide" id="projets">
 				<div class="row">
 					<div class="col s12">
-						<p style="color:#ffc107;font-family:'Oswald',sans-serif;font-size:5em;font-weight:bold;margin:0;">PROJETS</p>
+						<p class="hide-on-small-only" style="color:#ffc107;font-family:'Oswald',sans-serif;font-size:5em;font-weight:bold;margin:0;">PROJETS</p>
+						<p class="hide-on-med-and-up" style="color:#ffc107;font-family:'Oswald',sans-serif;font-size:3em;font-weight:bold;margin:0;">PROJETS</p>
 					</div>
 				</div>
 				<div class="row">
@@ -239,10 +248,26 @@
 				</div>
 			</div>
 
-			<!-- <div class="slide" id="veille" style="background-color:black;">
-				<div class="container">
+			<div class="slide" id="informations">
+				<div class="row">
+					<div class="col l12 m12 s12">
+						<p class="hide-on-small-only" style="color:#ffc107;font-family:'Oswald',sans-serif;font-size:5em;font-weight:bold;margin:0;">INFORMATIONS</p>
+						<p class="hide-on-med-and-up" style="color:#ffc107;font-family:'Oswald',sans-serif;font-size:2em;font-weight:bold;margin:0;">INFORMATIONS</p>
+					</div>
 				</div>
-			</div> -->
+				<div class="row">
+					<div class="col l4 m12 s12">
+						<div class="card large blue-grey darken-4 z-depth-3" style="padding:10px;padding-top:0px;border-top:2px solid #e3ab03;">
+							<p style="color:#fff;font-family:'Oswald',sans-serif;font-size:18px;">DOCUMENTS</p>
+						</div>
+					</div>
+					<div class="col l8 m12 s12">
+						<div class="card large blue-grey darken-4 z-depth-3" style="padding:10px;padding-top:0px;border-top:2px solid #e3ab03;">
+							<p style="color:#fff;font-family:'Oswald',sans-serif;font-size:18px;">VEILLE TECHNOLOGIQUE</p>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<div class="slide" id="contact">
 				<div class="row">
@@ -282,6 +307,7 @@
 			$(document).ready(function(){
 				$('.slide').hide();
 				$('#home').show();
+				$('#menu-phone').hide();
 			})
 
 		    $('.modal-trigger').click(function(){
@@ -297,7 +323,7 @@
 			})
 
 			var active = '#home';
-			$('.menu-item,#home-img').click(function(){
+			$('.menu-item,#home-img,.menu-phone-item').click(function(){
 				selector = '#'+$(this).attr('showing');
 				if(active != selector){
 					$(active).fadeOut();
@@ -310,6 +336,35 @@
 							$('#home-txt').fadeIn();
 						}
 					}, 500);
+				}
+			});
+
+			$(window).scroll(function(){
+			    var scroll = $(window).scrollTop();
+			    if(scroll >= 50){
+					$('#home-container').fadeOut(200);
+				} else {
+					$('#home-container').fadeIn(200);
+				}
+			});
+
+			$(window).resize(function(){
+				var width = window.innerWidth;
+				if(width > 992){
+					$('#menu-phone').hide();
+				}
+			});
+
+			$('#button-menu-phone').click(function(){
+				$('#menu-phone').animate({width:'toggle'},350);
+			})
+
+			$('body').click(function(e){
+				if(!$(e.target).is('.material-icons')){
+					var display = $('#menu-phone').css('display');
+					if(display == 'block'){
+						$('#menu-phone').animate({width:'toggle'},350);
+					}
 				}
 			});
 

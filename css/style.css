@@ -6,12 +6,12 @@
 	top:20px;
 }
 
-#menu>ul{
+#menu-classic{
 	margin:0;
 	cursor:default;
 }
 
-#menu>ul>li{
+#menu-classic>li{
 	display:inline;
 }
 
@@ -191,4 +191,29 @@ textarea.materialize-textarea:focus:not([readonly]) {
 }
 textarea.materialize-textarea:focus:not([readonly]) + label {
   color: #ffc107;
+}
+
+#menu-phone{
+	position:absolute;
+  	right:-20px;
+  	text-align:right;
+  	cursor:default;
+	background-color:#263238;
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.menu-phone-item{
+	color:#ffc107;
+	cursor:pointer;
+	border-radius:1px;
+	transition-duration: .5s;
+	font-size: 14px;
+	font-family: 'Oswald', sans-serif;
+	padding-top:6px;
+	padding-bottom:6px;
+	padding-left:10px;
+	padding-right:10px;
+	margin-left:5px;
+	border:1px transparent;
+	width:100%;
 }
