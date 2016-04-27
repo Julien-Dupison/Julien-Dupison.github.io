@@ -7,6 +7,7 @@
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Oswald" rel='stylesheet' type='text/css'/>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
@@ -302,7 +303,8 @@
 
 
     	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    	<script type="text/javascript" src="js/materialize.min.js"></script>
+    	<script type="text/javascript" src="js/materialize.js"></script>
+		<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 		<script>
 			$(document).ready(function(){
 				$('.slide').hide();
@@ -366,6 +368,10 @@
 						$('#menu-phone').animate({width:'toggle'},350);
 					}
 				}
+			});
+
+			$(".card-reveal").mCustomScrollbar({
+			    theme:"minimal",
 			});
 
 		</script>
