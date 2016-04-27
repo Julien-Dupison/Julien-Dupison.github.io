@@ -1,8 +1,5 @@
-getDim();
+W = window.innerWidth; H = window.innerHeight;
 var canvas = document.getElementById("canvas");
-function getDim(){
-	W = window.innerWidth; H = window.innerHeight;
-}
 var particles = [];
 
 for(var i = 0; i < 75; i++){
@@ -23,10 +20,9 @@ function create_particle(){
 }
 
 function draw(){
-	getDim();
 	ctx = canvas.getContext("2d");
-	ctx.canvas.width  = window.innerWidth;
-	ctx.canvas.height = window.innerHeight;
+	ctx.canvas.width  = W;
+	ctx.canvas.height = H;
 
 
 	ctx.fillStyle = 'rgba(55, 71, 79, 0)';
