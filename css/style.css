@@ -213,7 +213,6 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 	padding-bottom:6px;
 	padding-left:10px;
 	padding-right:10px;
-	margin-left:5px;
 	border:1px transparent;
 	width:100%;
 }
