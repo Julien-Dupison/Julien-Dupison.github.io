@@ -13,8 +13,11 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body>
-
+    <body style="background-color:#263238">
+		<!-- LOADER -->
+		<div id="loader-container">
+			<div id="loader"></div>
+		</div>
 		<!-- MODAL -->
 		<div id="modal-projet-full" class="modal blue-grey darken-4">
 	    	<img id="modal-projet-full-img" style="width:100%;" src="img/easypils/easypils_full_1.jpg">
@@ -397,9 +400,15 @@
 		<script>
 			$(document).ready(function(){
 				$('.slide').hide();
-				$('#home').show();
+				$('.slide-container').hide();
 				$('#menu-phone').hide();
 			})
+
+			setTimeout(function(){
+				$('#loader-container').hide();
+				$('.slide-container').fadeIn();
+				$('#home').fadeIn();
+			}, 3000);
 
 		    $('.modal-trigger').click(function(){
 				var img = $(this).attr('img-trigger');

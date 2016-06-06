@@ -305,3 +305,33 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 	font-size:16px;
 	margin-top: 0px;
 }
+
+#loader-container{
+	position: relative;
+	width:100%;
+	height:100vh;
+	background-color:#263238;
+	z-index:1;
+	padding-top:40vh;
+}
+
+#loader{
+	display:block;
+	position:relative;
+	border: 10px solid #f3f3f3;
+    border-top: 10px solid #ffc107;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    width: 120px;
+    height: 120px;
+	margin:auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
