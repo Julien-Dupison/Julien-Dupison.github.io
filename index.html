@@ -85,6 +85,7 @@
 									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;JS / JQuery / Node</li>
 									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;PHP</li>
 									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;Java / Android</li>
+									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;MySQL</li>
 								</ul>
 							</div>
 							<div class="col l4 m4 s12">
@@ -93,6 +94,7 @@
 									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;Git</li>
 									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;PostMan</li>
 									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;FileZilla / Putty</li>
+									<li><i class="tiny material-icons">done</i>&nbsp;&nbsp;&nbsp;Bootstrap / Materialize</li>
 								</ul>
 							</div>
 							<div class="col l4 m4 s12">
@@ -106,6 +108,7 @@
 					</div>
 				</div>
 			</div>
+
 			<!-- SLIDE PROJETS -->
 			<div class="slide" id="projets">
 				<div class="row">
@@ -248,7 +251,7 @@
 					</div>
 				</div>
 			</div>
-
+			<!-- SLIDE INFORMATIONS -->
 			<div class="slide" id="informations">
 				<div class="row">
 					<div class="col l12 m12 s12">
@@ -291,13 +294,71 @@
 						</div>
 					</div>
 					<div class="col l8 m12 s12">
-						<div class="card large blue-grey darken-4 z-depth-3" style="padding:10px;padding-top:0px;border-top:2px solid #e3ab03;">
+						<div class="card large blue-grey darken-4 z-depth-3 VT-container" style="padding:10px;padding-top:0px;border-top:2px solid #e3ab03;font-size:12px;">
 							<p style="color:#fff;font-family:'Oswald',sans-serif;font-size:18px;">VEILLE TECHNOLOGIQUE</p>
+							<p style="color:#fff;font-family:'Oswald',sans-serif;font-size:16px;">JAVASCRIPT ET SON EVOLUTION :</p>
+							<p class="flow-text" style="color:#fff;">Le javascript est un langage de programmation orienté objet principalement utilisé afin
+												   d'apporter de l'interactivité aux pages d'un site web, néanmoins la gamme des ses utilisations
+											       augmente de jours en jours. ceci permets d'apporter des alternatives aux techniques de devellopement web
+												   classique.<br><br>L'étude des ces alternatives etait donc pour moi une solution logique lors du choix de mon sujet de veille technologique
+												   car elle me permet d'élargir la gamme de mes compétences tout en reposant sur une technologie ayant déjà fait ses preuves.</p>
+							<p style="color:#fff;font-family:'Oswald',sans-serif;font-size:16px;">AXES :</p>
+
+							<div class="row">
+								<div class="col s12 m4 l3">
+									<button href="https://www.mongodb.com/" class="waves-effect waves-light VT-item valign-wrapper">
+										<p><a>MongoDB</a><br>Du Js en base de données</p>
+									</button>
+								</div>
+								<div class="col s12 m4 l3">
+									<button href="https://nodejs.org/en/" class="waves-effect waves-light VT-item valign-wrapper">
+										<p><a>Node.js</a><br>Du JS coté serveur</p>
+									</button>
+								</div>
+								<div class="col s12 m4 l3">
+									<button href="http://expressjs.com/" class="waves-effect waves-light VT-item valign-wrapper">
+										<p><a>Express</a><br>Infrastructure web pour Node</p>
+									</button>
+								</div>
+								<div class="col s12 m4 l3">
+									<button href="https://angularjs.org/" class="waves-effect waves-light VT-item valign-wrapper">
+										<p><a>Angular.js</a><br>Un framework JS front-end</p>
+									</button>
+								</div>
+								<div class="col s12 m4 l3">
+									<button href="https://www.meteor.com/" class="waves-effect waves-light VT-item valign-wrapper">
+										<p><a>Meteor</a><br>Un frameword JS full-stack</p>
+									</button>
+								</div>
+								<div class="col s12 m4 l3">
+									<button href="http://electron.atom.io/" class="waves-effect waves-light VT-item valign-wrapper">
+										<p><a>Electron</a><br>Du JS en application Bureau</p>
+									</button>
+								</div>
+							</div>
+							<p style="color:#fff;font-family:'Oswald',sans-serif;font-size:16px;">OUTILS :</p>
+							<div class="row">
+								<div class="col s12 m4 l3">
+									<button href="https://feedly.com/i/welcome/" class="waves-effect waves-light VT-item valign-wrapper">
+										<p><a>feedly</a><br>Agrégateur de flux</p>
+									</button>
+								</div>
+								<div class="col s12 m4 l3">
+									<button href="https://www.google.fr/alerts" class="waves-effect waves-light VT-item valign-wrapper">
+										<p><a>Google Alerts</a><br>Alertes par Mail</p>
+									</button>
+								</div>
+								<div class="col s12 m4 l3">
+									<button href="https://twitter.com/" class="waves-effect waves-light VT-item valign-wrapper">
+										<p><a>Twitter</a><br>Flux d'actualité</p>
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
+			<!-- SLIDE CONTACT -->
 			<div class="slide" id="contact">
 				<div class="row">
 					<div class="col s12">
@@ -359,6 +420,10 @@
 					$(active).fadeOut();
 					setTimeout(function() {
     					$(selector).fadeIn();
+						$('.VT-item').each(function(){
+							var cw = $(this).width();
+							$(this).css({'height':cw+'px'});
+						});
 						active = selector;
 						if(active == '#home'){
 							$('#home-txt').fadeOut();
@@ -383,8 +448,13 @@
 				if(width > 992){
 					$('#menu-phone').hide();
 				}
+
 				//W = window.innerWidth;
 				//H = window.innerHeight;
+				$('.VT-item').each(function(){
+					var cw = $(this).width();
+					$(this).css({'height':cw+'px'});
+				})
 			});
 
 			$('#button-menu-phone').click(function(){
@@ -404,6 +474,14 @@
 			    theme:"minimal",
 			});
 
+			$(".VT-container").mCustomScrollbar({
+			    theme:"minimal",
+			});
+
+			$(".VT-item").click(function(){
+				var href = $(this).attr("href");
+				window.open(href);
+			})
 		</script>
     </body>
 

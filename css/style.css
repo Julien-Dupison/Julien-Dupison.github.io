@@ -264,3 +264,44 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 	transform: translateY(-25px);
 	font-size:25px;
 }
+
+.VT-container{
+	overflow-y:scroll;
+	transition: 0.5s;
+}
+
+.VT-container:hover .VT-item{
+	width:99%;
+}
+
+.VT-item{
+	background-color: #ffc107;
+	width:100%;
+	transition: 0.5s;
+	color:white;
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 20px;
+	outline:none;
+	border:none;
+}
+
+.VT-item>p>a{
+	color:white;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.VT-item:focus{
+	background-color:#ffc107;
+}
+
+.VT-item:hover{
+	transform: translateY(-5px);
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.VT-title{
+	font-size:16px;
+	margin-top: 0px;
+}
